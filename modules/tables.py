@@ -33,3 +33,10 @@ class Product(db.Model): # tables
 
   def __repr__(self): # used to decide how the object will be printed
     return str({'name':self.name,'price':self.price,'expiry':self.expiry})
+
+  def new(self):
+    db.session.add(self)
+    db.session.commit()
+
+  def save(self):
+    db.session.commit()
