@@ -1,0 +1,903 @@
+[2020-10-27 13:08:23 +0000] [17355] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  accesslog: gunicorn.log
+  disable_redirect_access_to_syslog: False
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fd8c99e0500>
+  errorlog: gunicorn.error.log
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fd8c99e0320>
+  pre_fork: <function pre_fork at 0x7fd8c99e0410>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  sendfile: None
+  reuse_port: False
+  group: 1000
+  umask: 0
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  workers: 1
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  proc_name: None
+  pre_exec: <function pre_exec at 0x7fd8c99e08c0>
+  worker_tmp_dir: None
+  strip_header_spaces: False
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7fd8c99e0de8>
+  logconfig: None
+  logconfig_dict: {}
+  config: None
+  pidfile: None
+  check_config: False
+  statsd_prefix: 
+  on_reload: <function on_reload at 0x7fd8c99e0230>
+  reload_engine: auto
+  reload_extra_files: []
+  user: 1000
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fd8c99e09b0>
+  post_request: <function post_request at 0x7fd8c99e0a28>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fd8c99e06e0>
+  chdir: /home/prg357/flask_rest/src
+  daemon: False
+  paste: None
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7fd8c99e0140>
+  post_worker_init: <function post_worker_init at 0x7fd8c99e05f0>
+  worker_abort: <function worker_abort at 0x7fd8c99e07d0>
+  worker_exit: <function worker_exit at 0x7fd8c99e0c08>
+  default_proc_name: wsgi:app
+  loglevel: debug
+  capture_output: True
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  syslog: False
+  bind: ['0.0.0.0:5000']
+  raw_env: []
+  initgroups: False
+  reload: False
+  limit_request_field_size: 8190
+  child_exit: <function child_exit at 0x7fd8c99e0b18>
+  nworkers_changed: <function nworkers_changed at 0x7fd8c99e0cf8>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2020-10-27 13:08:23 +0000] [17355] [INFO] Starting gunicorn 19.10.0
+[2020-10-27 13:08:23 +0000] [17355] [DEBUG] Arbiter booted
+[2020-10-27 13:08:23 +0000] [17355] [INFO] Listening at: http://0.0.0.0:5000 (17355)
+[2020-10-27 13:08:23 +0000] [17355] [INFO] Using worker: sync
+[2020-10-27 13:08:23 +0000] [17361] [INFO] Booting worker with pid: 17361
+[2020-10-27 13:08:23 +0000] [17355] [DEBUG] 1 workers
+/home/prg357/flask_rest/venv/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:834: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2020-10-27 13:19:01 +0000] [17361] [DEBUG] DELETE /delete/55
+[2020-10-27 13:19:05 +0000] [17355] [INFO] Handling signal: int
+[2020-10-27 13:19:05 +0000] [17361] [INFO] Worker exiting (pid: 17361)
+[2020-10-27 13:19:06 +0000] [17355] [INFO] Shutting down: Master
+[2020-10-27 13:19:08 +0000] [17518] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  accesslog: gunicorn.log
+  disable_redirect_access_to_syslog: False
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fb698df8500>
+  errorlog: gunicorn.error.log
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fb698df8320>
+  pre_fork: <function pre_fork at 0x7fb698df8410>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  sendfile: None
+  reuse_port: False
+  group: 1000
+  umask: 0
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  workers: 1
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  proc_name: None
+  pre_exec: <function pre_exec at 0x7fb698df88c0>
+  worker_tmp_dir: None
+  strip_header_spaces: False
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7fb698df8de8>
+  logconfig: None
+  logconfig_dict: {}
+  config: None
+  pidfile: None
+  check_config: False
+  statsd_prefix: 
+  on_reload: <function on_reload at 0x7fb698df8230>
+  reload_engine: auto
+  reload_extra_files: []
+  user: 1000
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fb698df89b0>
+  post_request: <function post_request at 0x7fb698df8a28>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fb698df86e0>
+  chdir: /home/prg357/flask_rest/src
+  daemon: False
+  paste: None
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7fb698df8140>
+  post_worker_init: <function post_worker_init at 0x7fb698df85f0>
+  worker_abort: <function worker_abort at 0x7fb698df87d0>
+  worker_exit: <function worker_exit at 0x7fb698df8c08>
+  default_proc_name: wsgi:app
+  loglevel: debug
+  capture_output: True
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  syslog: False
+  bind: ['0.0.0.0:5000']
+  raw_env: []
+  initgroups: False
+  reload: False
+  limit_request_field_size: 8190
+  child_exit: <function child_exit at 0x7fb698df8b18>
+  nworkers_changed: <function nworkers_changed at 0x7fb698df8cf8>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2020-10-27 13:19:08 +0000] [17518] [INFO] Starting gunicorn 19.10.0
+[2020-10-27 13:19:08 +0000] [17518] [DEBUG] Arbiter booted
+[2020-10-27 13:19:08 +0000] [17518] [INFO] Listening at: http://0.0.0.0:5000 (17518)
+[2020-10-27 13:19:08 +0000] [17518] [INFO] Using worker: sync
+[2020-10-27 13:19:08 +0000] [17522] [INFO] Booting worker with pid: 17522
+[2020-10-27 13:19:08 +0000] [17518] [DEBUG] 1 workers
+/home/prg357/flask_rest/venv/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:834: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2020-10-27 13:19:36 +0000] [17518] [INFO] Handling signal: int
+[2020-10-27 13:19:36 +0000] [17522] [INFO] Worker exiting (pid: 17522)
+[2020-10-27 13:19:36 +0000] [17518] [INFO] Shutting down: Master
+[2020-10-27 13:19:40 +0000] [17563] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  accesslog: gunicorn.log
+  disable_redirect_access_to_syslog: False
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f35d4f81500>
+  errorlog: gunicorn.error.log
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f35d4f81320>
+  pre_fork: <function pre_fork at 0x7f35d4f81410>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  sendfile: None
+  reuse_port: False
+  group: 1000
+  umask: 0
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  workers: 1
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  proc_name: None
+  pre_exec: <function pre_exec at 0x7f35d4f818c0>
+  worker_tmp_dir: None
+  strip_header_spaces: False
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f35d4f81de8>
+  logconfig: None
+  logconfig_dict: {}
+  config: None
+  pidfile: None
+  check_config: False
+  statsd_prefix: 
+  on_reload: <function on_reload at 0x7f35d4f81230>
+  reload_engine: auto
+  reload_extra_files: []
+  user: 1000
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f35d4f819b0>
+  post_request: <function post_request at 0x7f35d4f81a28>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f35d4f816e0>
+  chdir: /home/prg357/flask_rest/src
+  daemon: False
+  paste: None
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f35d4f81140>
+  post_worker_init: <function post_worker_init at 0x7f35d4f815f0>
+  worker_abort: <function worker_abort at 0x7f35d4f817d0>
+  worker_exit: <function worker_exit at 0x7f35d4f81c08>
+  default_proc_name: wsgi:app
+  loglevel: debug
+  capture_output: True
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  syslog: False
+  bind: ['0.0.0.0:5000']
+  raw_env: []
+  initgroups: False
+  reload: False
+  limit_request_field_size: 8190
+  child_exit: <function child_exit at 0x7f35d4f81b18>
+  nworkers_changed: <function nworkers_changed at 0x7f35d4f81cf8>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2020-10-27 13:19:40 +0000] [17563] [INFO] Starting gunicorn 19.10.0
+[2020-10-27 13:19:40 +0000] [17563] [DEBUG] Arbiter booted
+[2020-10-27 13:19:40 +0000] [17563] [INFO] Listening at: http://0.0.0.0:5000 (17563)
+[2020-10-27 13:19:40 +0000] [17563] [INFO] Using worker: sync
+[2020-10-27 13:19:40 +0000] [17567] [INFO] Booting worker with pid: 17567
+[2020-10-27 13:19:40 +0000] [17563] [DEBUG] 1 workers
+/home/prg357/flask_rest/venv/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:834: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2020-10-27 13:19:50 +0000] [17567] [DEBUG] DELETE /delete/55
+[2020-10-27 13:20:21 +0000] [17563] [INFO] Handling signal: int
+[2020-10-27 13:20:22 +0000] [17567] [INFO] Worker exiting (pid: 17567)
+[2020-10-27 13:20:22 +0000] [17563] [INFO] Shutting down: Master
+[2020-10-27 15:53:23 +0000] [21772] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  accesslog: gunicorn.log
+  disable_redirect_access_to_syslog: False
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fa09294a578>
+  errorlog: gunicorn.error.log
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fa09294a398>
+  pre_fork: <function pre_fork at 0x7fa09294a488>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  sendfile: None
+  reuse_port: False
+  group: 1000
+  umask: 0
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  workers: 1
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  proc_name: None
+  pre_exec: <function pre_exec at 0x7fa09294a938>
+  worker_tmp_dir: None
+  strip_header_spaces: False
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7fa09294ae60>
+  logconfig: None
+  logconfig_dict: {}
+  config: None
+  pidfile: None
+  check_config: False
+  statsd_prefix: 
+  on_reload: <function on_reload at 0x7fa09294a2a8>
+  reload_engine: auto
+  reload_extra_files: []
+  user: 1000
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fa09294aa28>
+  post_request: <function post_request at 0x7fa09294aaa0>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fa09294a758>
+  chdir: /home/prg357/flask_rest/src
+  daemon: False
+  paste: None
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7fa09294a1b8>
+  post_worker_init: <function post_worker_init at 0x7fa09294a668>
+  worker_abort: <function worker_abort at 0x7fa09294a848>
+  worker_exit: <function worker_exit at 0x7fa09294ac80>
+  default_proc_name: wsgi:app
+  loglevel: debug
+  capture_output: True
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  syslog: False
+  bind: ['0.0.0.0:5000']
+  raw_env: []
+  initgroups: False
+  reload: False
+  limit_request_field_size: 8190
+  child_exit: <function child_exit at 0x7fa09294ab90>
+  nworkers_changed: <function nworkers_changed at 0x7fa09294ad70>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2020-10-27 15:53:23 +0000] [21772] [INFO] Starting gunicorn 19.10.0
+[2020-10-27 15:53:23 +0000] [21772] [DEBUG] Arbiter booted
+[2020-10-27 15:53:23 +0000] [21772] [INFO] Listening at: http://0.0.0.0:5000 (21772)
+[2020-10-27 15:53:23 +0000] [21772] [INFO] Using worker: sync
+[2020-10-27 15:53:23 +0000] [21777] [INFO] Booting worker with pid: 21777
+[2020-10-27 15:53:23 +0000] [21772] [DEBUG] 1 workers
+/home/prg357/flask_rest/venv/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:834: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2020-10-27 15:53:31 +0000] [21777] [DEBUG] DELETE /delete/55
+[2020-10-27 15:53:37 +0000] [21777] [DEBUG] DELETE /delete/55
+[2020-10-27 15:53:40 +0000] [21772] [INFO] Handling signal: int
+[2020-10-27 15:53:40 +0000] [21777] [INFO] Worker exiting (pid: 21777)
+[2020-10-27 15:53:40 +0000] [21772] [INFO] Shutting down: Master
+[2020-10-27 16:04:37 +0000] [22001] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  accesslog: gunicorn.log
+  disable_redirect_access_to_syslog: False
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f0903deb578>
+  errorlog: gunicorn.error.log
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f0903deb398>
+  pre_fork: <function pre_fork at 0x7f0903deb488>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  sendfile: None
+  reuse_port: False
+  group: 1000
+  umask: 0
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  workers: 1
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  proc_name: None
+  pre_exec: <function pre_exec at 0x7f0903deb938>
+  worker_tmp_dir: None
+  strip_header_spaces: False
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f0903debe60>
+  logconfig: None
+  logconfig_dict: {}
+  config: None
+  pidfile: None
+  check_config: False
+  statsd_prefix: 
+  on_reload: <function on_reload at 0x7f0903deb2a8>
+  reload_engine: auto
+  reload_extra_files: []
+  user: 1000
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f0903deba28>
+  post_request: <function post_request at 0x7f0903debaa0>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f0903deb758>
+  chdir: /home/prg357/flask_rest/src
+  daemon: False
+  paste: None
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f0903deb1b8>
+  post_worker_init: <function post_worker_init at 0x7f0903deb668>
+  worker_abort: <function worker_abort at 0x7f0903deb848>
+  worker_exit: <function worker_exit at 0x7f0903debc80>
+  default_proc_name: wsgi:app
+  loglevel: debug
+  capture_output: True
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  syslog: False
+  bind: ['0.0.0.0:5000']
+  raw_env: []
+  initgroups: False
+  reload: False
+  limit_request_field_size: 8190
+  child_exit: <function child_exit at 0x7f0903debb90>
+  nworkers_changed: <function nworkers_changed at 0x7f0903debd70>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2020-10-27 16:04:37 +0000] [22001] [INFO] Starting gunicorn 19.10.0
+[2020-10-27 16:04:37 +0000] [22001] [DEBUG] Arbiter booted
+[2020-10-27 16:04:37 +0000] [22001] [INFO] Listening at: http://0.0.0.0:5000 (22001)
+[2020-10-27 16:04:37 +0000] [22001] [INFO] Using worker: sync
+[2020-10-27 16:04:37 +0000] [22006] [INFO] Booting worker with pid: 22006
+[2020-10-27 16:04:37 +0000] [22001] [DEBUG] 1 workers
+/home/prg357/flask_rest/venv/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:834: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2020-10-27 16:04:40 +0000] [22006] [DEBUG] DELETE /delete/55
+[2020-10-27 16:06:34 +0000] [22001] [INFO] Handling signal: int
+[2020-10-27 16:06:35 +0000] [22006] [INFO] Worker exiting (pid: 22006)
+[2020-10-27 16:06:35 +0000] [22001] [INFO] Shutting down: Master
+[2020-10-27 16:06:36 +0000] [22054] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  accesslog: gunicorn.log
+  disable_redirect_access_to_syslog: False
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f5115441578>
+  errorlog: gunicorn.error.log
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f5115441398>
+  pre_fork: <function pre_fork at 0x7f5115441488>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  sendfile: None
+  reuse_port: False
+  group: 1000
+  umask: 0
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  workers: 1
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  proc_name: None
+  pre_exec: <function pre_exec at 0x7f5115441938>
+  worker_tmp_dir: None
+  strip_header_spaces: False
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f5115441e60>
+  logconfig: None
+  logconfig_dict: {}
+  config: None
+  pidfile: None
+  check_config: False
+  statsd_prefix: 
+  on_reload: <function on_reload at 0x7f51154412a8>
+  reload_engine: auto
+  reload_extra_files: []
+  user: 1000
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f5115441a28>
+  post_request: <function post_request at 0x7f5115441aa0>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f5115441758>
+  chdir: /home/prg357/flask_rest/src
+  daemon: False
+  paste: None
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f51154411b8>
+  post_worker_init: <function post_worker_init at 0x7f5115441668>
+  worker_abort: <function worker_abort at 0x7f5115441848>
+  worker_exit: <function worker_exit at 0x7f5115441c80>
+  default_proc_name: wsgi:app
+  loglevel: debug
+  capture_output: True
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  syslog: False
+  bind: ['0.0.0.0:5000']
+  raw_env: []
+  initgroups: False
+  reload: False
+  limit_request_field_size: 8190
+  child_exit: <function child_exit at 0x7f5115441b90>
+  nworkers_changed: <function nworkers_changed at 0x7f5115441d70>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2020-10-27 16:06:36 +0000] [22054] [INFO] Starting gunicorn 19.10.0
+[2020-10-27 16:06:36 +0000] [22054] [DEBUG] Arbiter booted
+[2020-10-27 16:06:36 +0000] [22054] [INFO] Listening at: http://0.0.0.0:5000 (22054)
+[2020-10-27 16:06:36 +0000] [22054] [INFO] Using worker: sync
+[2020-10-27 16:06:36 +0000] [22058] [INFO] Booting worker with pid: 22058
+[2020-10-27 16:06:36 +0000] [22054] [DEBUG] 1 workers
+/home/prg357/flask_rest/venv/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:834: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2020-10-27 16:06:36 +0000] [22058] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/prg357/flask_rest/src/wsgi.py", line 1, in <module>
+    from modules import app
+  File "/home/prg357/flask_rest/src/modules/__init__.py", line 11, in <module>
+    from modules import endpoints
+  File "/home/prg357/flask_rest/src/modules/endpoints.py", line 3, in <module>
+    from modules.tables import Category, Product
+  File "/home/prg357/flask_rest/src/modules/tables.py", line 5, in <module>
+    gunicorn_logger = logging.getLogger('gunicorn.error')
+NameError: name 'logging' is not defined
+[2020-10-27 16:06:36 +0000] [22058] [INFO] Worker exiting (pid: 22058)
+[2020-10-27 16:06:36 +0000] [22054] [INFO] Shutting down: Master
+[2020-10-27 16:06:36 +0000] [22054] [INFO] Reason: Worker failed to boot.
+[2020-10-27 16:06:41 +0000] [22060] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  accesslog: gunicorn.log
+  disable_redirect_access_to_syslog: False
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7fc0d9627578>
+  errorlog: gunicorn.error.log
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7fc0d9627398>
+  pre_fork: <function pre_fork at 0x7fc0d9627488>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  sendfile: None
+  reuse_port: False
+  group: 1000
+  umask: 0
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  workers: 1
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  proc_name: None
+  pre_exec: <function pre_exec at 0x7fc0d9627938>
+  worker_tmp_dir: None
+  strip_header_spaces: False
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7fc0d9627e60>
+  logconfig: None
+  logconfig_dict: {}
+  config: None
+  pidfile: None
+  check_config: False
+  statsd_prefix: 
+  on_reload: <function on_reload at 0x7fc0d96272a8>
+  reload_engine: auto
+  reload_extra_files: []
+  user: 1000
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7fc0d9627a28>
+  post_request: <function post_request at 0x7fc0d9627aa0>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7fc0d9627758>
+  chdir: /home/prg357/flask_rest/src
+  daemon: False
+  paste: None
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7fc0d96271b8>
+  post_worker_init: <function post_worker_init at 0x7fc0d9627668>
+  worker_abort: <function worker_abort at 0x7fc0d9627848>
+  worker_exit: <function worker_exit at 0x7fc0d9627c80>
+  default_proc_name: wsgi:app
+  loglevel: debug
+  capture_output: True
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  syslog: False
+  bind: ['0.0.0.0:5000']
+  raw_env: []
+  initgroups: False
+  reload: False
+  limit_request_field_size: 8190
+  child_exit: <function child_exit at 0x7fc0d9627b90>
+  nworkers_changed: <function nworkers_changed at 0x7fc0d9627d70>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2020-10-27 16:06:41 +0000] [22060] [INFO] Starting gunicorn 19.10.0
+[2020-10-27 16:06:41 +0000] [22060] [DEBUG] Arbiter booted
+[2020-10-27 16:06:41 +0000] [22060] [INFO] Listening at: http://0.0.0.0:5000 (22060)
+[2020-10-27 16:06:41 +0000] [22060] [INFO] Using worker: sync
+[2020-10-27 16:06:41 +0000] [22064] [INFO] Booting worker with pid: 22064
+[2020-10-27 16:06:41 +0000] [22060] [DEBUG] 1 workers
+/home/prg357/flask_rest/venv/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:834: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2020-10-27 16:06:41 +0000] [22064] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/arbiter.py", line 586, in spawn_worker
+    worker.init_process()
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/workers/base.py", line 144, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/prg357/flask_rest/venv/lib/python2.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/home/prg357/flask_rest/src/wsgi.py", line 1, in <module>
+    from modules import app
+  File "/home/prg357/flask_rest/src/modules/__init__.py", line 11, in <module>
+    from modules import endpoints
+  File "/home/prg357/flask_rest/src/modules/endpoints.py", line 3, in <module>
+    from modules.tables import Category, Product
+  File "/home/prg357/flask_rest/src/modules/tables.py", line 5, in <module>
+    gunicorn_logger = logging.getLogger('gunicorn.error')
+NameError: name 'logging' is not defined
+[2020-10-27 16:06:41 +0000] [22064] [INFO] Worker exiting (pid: 22064)
+[2020-10-27 16:06:41 +0000] [22060] [INFO] Shutting down: Master
+[2020-10-27 16:06:41 +0000] [22060] [INFO] Reason: Worker failed to boot.
+[2020-10-27 16:07:49 +0000] [22103] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  accesslog: gunicorn.log
+  disable_redirect_access_to_syslog: False
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7ff89e714578>
+  errorlog: gunicorn.error.log
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7ff89e714398>
+  pre_fork: <function pre_fork at 0x7ff89e714488>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  sendfile: None
+  reuse_port: False
+  group: 1000
+  umask: 0
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  workers: 1
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  proc_name: None
+  pre_exec: <function pre_exec at 0x7ff89e714938>
+  worker_tmp_dir: None
+  strip_header_spaces: False
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7ff89e714e60>
+  logconfig: None
+  logconfig_dict: {}
+  config: None
+  pidfile: None
+  check_config: False
+  statsd_prefix: 
+  on_reload: <function on_reload at 0x7ff89e7142a8>
+  reload_engine: auto
+  reload_extra_files: []
+  user: 1000
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7ff89e714a28>
+  post_request: <function post_request at 0x7ff89e714aa0>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7ff89e714758>
+  chdir: /home/prg357/flask_rest/src
+  daemon: False
+  paste: None
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7ff89e7141b8>
+  post_worker_init: <function post_worker_init at 0x7ff89e714668>
+  worker_abort: <function worker_abort at 0x7ff89e714848>
+  worker_exit: <function worker_exit at 0x7ff89e714c80>
+  default_proc_name: wsgi:app
+  loglevel: debug
+  capture_output: True
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  syslog: False
+  bind: ['0.0.0.0:5000']
+  raw_env: []
+  initgroups: False
+  reload: False
+  limit_request_field_size: 8190
+  child_exit: <function child_exit at 0x7ff89e714b90>
+  nworkers_changed: <function nworkers_changed at 0x7ff89e714d70>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2020-10-27 16:07:49 +0000] [22103] [INFO] Starting gunicorn 19.10.0
+[2020-10-27 16:07:49 +0000] [22103] [DEBUG] Arbiter booted
+[2020-10-27 16:07:49 +0000] [22103] [INFO] Listening at: http://0.0.0.0:5000 (22103)
+[2020-10-27 16:07:49 +0000] [22103] [INFO] Using worker: sync
+[2020-10-27 16:07:49 +0000] [22108] [INFO] Booting worker with pid: 22108
+[2020-10-27 16:07:49 +0000] [22103] [DEBUG] 1 workers
+/home/prg357/flask_rest/venv/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:834: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2020-10-27 16:07:54 +0000] [22108] [DEBUG] DELETE /delete/55
+[2020-10-27 16:08:04 +0000] [22103] [INFO] Handling signal: int
+[2020-10-27 16:08:04 +0000] [22108] [INFO] Worker exiting (pid: 22108)
+[2020-10-27 16:08:04 +0000] [22103] [INFO] Shutting down: Master
+[2020-10-27 16:16:09 +0000] [22305] [DEBUG] Current configuration:
+  proxy_protocol: False
+  worker_connections: 1000
+  accesslog: gunicorn.log
+  disable_redirect_access_to_syslog: False
+  statsd_host: None
+  max_requests_jitter: 0
+  post_fork: <function post_fork at 0x7f2b4649d578>
+  errorlog: gunicorn.error.log
+  enable_stdio_inheritance: False
+  worker_class: sync
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  syslog_facility: user
+  when_ready: <function when_ready at 0x7f2b4649d398>
+  pre_fork: <function pre_fork at 0x7f2b4649d488>
+  cert_reqs: 0
+  preload_app: False
+  keepalive: 2
+  sendfile: None
+  reuse_port: False
+  group: 1000
+  umask: 0
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  workers: 1
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  spew: False
+  proc_name: None
+  pre_exec: <function pre_exec at 0x7f2b4649d938>
+  worker_tmp_dir: None
+  strip_header_spaces: False
+  limit_request_fields: 100
+  pythonpath: None
+  on_exit: <function on_exit at 0x7f2b4649de60>
+  logconfig: None
+  logconfig_dict: {}
+  config: None
+  pidfile: None
+  check_config: False
+  statsd_prefix: 
+  on_reload: <function on_reload at 0x7f2b4649d2a8>
+  reload_engine: auto
+  reload_extra_files: []
+  user: 1000
+  proxy_allow_ips: ['127.0.0.1']
+  pre_request: <function pre_request at 0x7f2b4649da28>
+  post_request: <function post_request at 0x7f2b4649daa0>
+  forwarded_allow_ips: ['127.0.0.1']
+  worker_int: <function worker_int at 0x7f2b4649d758>
+  chdir: /home/prg357/flask_rest/src
+  daemon: False
+  paste: None
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests: 0
+  limit_request_line: 4094
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  certfile: None
+  on_starting: <function on_starting at 0x7f2b4649d1b8>
+  post_worker_init: <function post_worker_init at 0x7f2b4649d668>
+  worker_abort: <function worker_abort at 0x7f2b4649d848>
+  worker_exit: <function worker_exit at 0x7f2b4649dc80>
+  default_proc_name: wsgi:app
+  loglevel: debug
+  capture_output: True
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  ciphers: TLSv1
+  syslog: False
+  bind: ['0.0.0.0:5000']
+  raw_env: []
+  initgroups: False
+  reload: False
+  limit_request_field_size: 8190
+  child_exit: <function child_exit at 0x7f2b4649db90>
+  nworkers_changed: <function nworkers_changed at 0x7f2b4649dd70>
+  timeout: 30
+  keyfile: None
+  ca_certs: None
+  tmp_upload_dir: None
+  backlog: 2048
+  logger_class: gunicorn.glogging.Logger
+[2020-10-27 16:16:09 +0000] [22305] [INFO] Starting gunicorn 19.10.0
+[2020-10-27 16:16:09 +0000] [22305] [DEBUG] Arbiter booted
+[2020-10-27 16:16:09 +0000] [22305] [INFO] Listening at: http://0.0.0.0:5000 (22305)
+[2020-10-27 16:16:09 +0000] [22305] [INFO] Using worker: sync
+[2020-10-27 16:16:09 +0000] [22310] [INFO] Booting worker with pid: 22310
+[2020-10-27 16:16:09 +0000] [22305] [DEBUG] 1 workers
+/home/prg357/flask_rest/venv/lib/python2.7/site-packages/flask_sqlalchemy/__init__.py:834: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+[2020-10-27 16:16:18 +0000] [22310] [DEBUG] DELETE /delete/55
+[2020-10-27 16:16:21 +0000] [22305] [INFO] Handling signal: int
+[2020-10-27 16:16:21 +0000] [22310] [INFO] Worker exiting (pid: 22310)
+[2020-10-27 16:16:22 +0000] [22305] [INFO] Shutting down: Master

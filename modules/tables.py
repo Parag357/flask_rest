@@ -1,6 +1,11 @@
 from datetime import date,datetime 
-from modules import db
+from modules import app,db
+import logging
 
+if __name__ != '__main__':
+    gunicorn_logger = logging.getLogger('gunicorn.error')
+    app.logger.handlers = gunicorn_logger.handlers
+    app.logger.setLevel(gunicorn_logger.level)
 
 
 class Category(db.Model): # tables
@@ -40,3 +45,11 @@ class Product(db.Model): # tables
 
   def save(self):
     db.session.commit()
+
+  @staticmethod
+  def delete(id):
+    return Product.query.filter_by(id=id).delete()
+
+  @staticmethod
+  def Query():
+    return Product.query

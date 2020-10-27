@@ -15,7 +15,7 @@ def create():
     category_id=request.json['category_id']
 
   except KeyError as e:      # key error for missing items
-    return jsonify({"error":"missing"+str(e)}), 400
+    return jsonify({"error":"missing"+str(e)}), 500
 
   if price <= 0.0:
     return jsonify({"error":"price must be > 0"}),400
@@ -38,7 +38,7 @@ def create():
 
 @app.route('/get', methods=['GET'])
 def list():
-  product=Product.query
+  product=Product.Query()
   result=[]
 
   if request.data:
@@ -73,10 +73,11 @@ def list():
 
 @app.route('/delete/<id>', methods=['DELETE'])
 def delete(id):
+  print(id)
   try:
-    product=Product.query.filter_by(id=id).delete()
-  except:
-    return jsonify([{'msg':"product is deleted"}]),404
+    product=Product.delete(id)
+  except Exception as e:
+    return jsonify([{'msg':"product is deleted"}]),200
   db.session.commit()
   return jsonify([{'msg':"product is deleted"}]),200
 
