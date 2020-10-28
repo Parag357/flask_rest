@@ -15,7 +15,7 @@ def create():
     category_id=request.json['category_id']
 
   except KeyError as e:      # key error for missing items
-    return jsonify({"error":"missing"+str(e)}), 500
+    return jsonify({"error":"missing"+str(e)}), 400
 
   if price <= 0.0:
     return jsonify({"error":"price must be > 0"}),400
@@ -73,7 +73,6 @@ def list():
 
 @app.route('/delete/<id>', methods=['DELETE'])
 def delete(id):
-  print(id)
   try:
     product=Product.delete(id)
   except Exception as e:
@@ -84,7 +83,7 @@ def delete(id):
 
 @app.route('/update/<id>', methods=['POST'])
 def update(id):
-  product = Product.query.get(id)
+  product = Product.Query().get(id)
 
   if not product:
     return jsonify({"error":"product unavailable"}),404 # for wrong product id
@@ -112,7 +111,3 @@ def update(id):
 
     return jsonify([{'msg':"product is updated"}]),201
   return jsonify({'msg':'nothing to update'}),404
-
-  @app.route('/',methods=['GET'])
-  def welcome():
-    return jsonify({"msg":"welcome"})
