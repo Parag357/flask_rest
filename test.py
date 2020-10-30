@@ -394,41 +394,46 @@ class InventoryTest(unittest.TestCase):
 		self.assertEqual(response.content_type,'application/json')
 		mock_update.assert_called_once_with(u'79')
 
-	# @patch('modules.tables.Product.Query')
-	# @patch('modules.tables.Product.save')
-	# def test_update_failure_with_duplicate_name(self,mock_update_query,mock_update_save):
-	# 	url="/update/79"
-	# 	tester=app.test_client(self)
-	# 	mock_data = {
-	# 	"name":"prod1",
- # 	  	"price":15.0,
- # 	  	"expiry":"09/09/2023",
- # 	  	"category_id":2	
-	# 	}
-	# 	mock_update_save.side_effect = IntegrityError('violates unique constraint','mock','mock')
-	# 	response=tester.post(url,data=json.dumps(mock_data),content_type='application/json')
-	# 	statuscode=response.status_code
-	# 	self.assertEqual(statuscode,404)
-	# 	self.assertEqual(response.content_type,'application/json')
-	# 	mock_update.assert_called_once()
+	@patch('modules.tables.Product.get_product_by_id')
+	@patch('modules.tables.Product.save')
+	def test_update_failure_with_duplicate_name(self,mock_update_save,mock_update_query):
+		url="/update/79"
+		tester=app.test_client(self)
+		mock_data = {
+		"name":"prod1",
+ 	  	"price":15.0,
+ 	  	"expiry":"09/09/2023",
+ 	  	"category_id":2	
+		}
+		mock_update_query.return_value=Product(name="prod1",price=15.0,expiry='03/01/2029',category_id=1)
+		mock_update_save.side_effect = IntegrityError('violates unique constraint','mock','mock')
+		response=tester.post(url,data=json.dumps(mock_data),content_type='application/json')
+		statuscode=response.status_code
+		self.assertEqual(statuscode,400)
+		self.assertEqual(response.content_type,'application/json')
+		mock_update_query.assert_called_once_with(u'79')
+		mock_update_save.assert_called_once(	)
 
-	# @patch('modules.tables.Product.new')
-	# def test_create_failure_with_unavailable_category(self,mock_update):
-	# 	url="/update/79"
-	# 	tester=app.test_client(self)
+	@patch('modules.tables.Product.get_product_by_id')
+	@patch('modules.tables.Product.save')
+	def test_update_failure_with_unavailable_category(self,mock_update_save,mock_update_query):
+		url="/update/79"
+		tester=app.test_client(self)
 
-	# 	mock_data = {
-	# 	"name":"prod30",
-	# 	"price":15.0,
-	# 	"expiry":"09/09/2023",
-	# 	"category_id":111
-	# 	}
-	# 	mock_update.side_effect = IntegrityError('violates foreign key constraint','mock','mock')
-	# 	response=tester.post(url,data=json.dumps(mock_data),content_type='application/json')
-	# 	statuscode=response.status_code
-	# 	self.assertEqual(statuscode,404)
-	# 	self.assertEqual(response.content_type,'application/json')
-	# 	mock_update.assert_called_once()
+		mock_data = {
+		"name":"prod30",
+		"price":15.0,
+		"expiry":"09/09/2023",
+		"category_id":111
+		}
+		mock_update_query.return_value=Product(name="prod1",price=15.0,expiry='03/01/2029',category_id=1)
+		mock_update_save.side_effect = IntegrityError('violates foreign key constraint','mock','mock')
+		response=tester.post(url,data=json.dumps(mock_data),content_type='application/json')
+		statuscode=response.status_code
+		self.assertEqual(statuscode,404)
+		self.assertEqual(response.content_type,'application/json')
+		mock_update_query.assert_called_once_with(u'79')
+		mock_update_save.assert_called_once()
 
 	@patch('modules.tables.Product.get_product_by_id')
 	def test_update_with_wrong_id(self,mock_update):

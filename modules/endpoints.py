@@ -78,7 +78,7 @@ def update(id):
 
     except IntegrityError as e:
       if "violates unique constraint" in str(e):
-        return jsonify({"error":name+" already exists"}),400
+        return jsonify({'error':'name already exists'}),400
       elif "violates foreign key constraint" in str(e):
         return jsonify({"error":"category "+str(category_id)+ " is unavailable"}),404
 
