@@ -1,6 +1,7 @@
 from datetime import date,datetime 
 from modules import app,db
 import logging
+from flask import request
 
 if __name__ != '__main__':
     gunicorn_logger = logging.getLogger('gunicorn.error')
@@ -37,7 +38,7 @@ class Product(db.Model): # tables
     self.category_id=category_id
 
   def __repr__(self): # used to decide how the object will be printed
-    return str({'name':self.name,'price':self.price,'expiry':self.expiry})
+    return str({'name':self.name,'price':self.price,'expiry':self.expiry,'category_id':self.category_id})
 
   def new(self):
     db.session.add(self)
@@ -53,3 +54,37 @@ class Product(db.Model): # tables
   @staticmethod
   def Query():
     return Product.query
+
+  def All(self):
+    return Product().all()
+
+  @staticmethod
+  def get_filtered_products(request):
+
+    product=Product.query
+
+    if request.data:
+      category_id = request.json.get('category_id')
+      sort = request.json.get('sort')
+      order = request.json.get('order')
+
+      if category_id:
+        product=product.filter_by(category_id=category_id)
+
+      if sort == "price":
+        if order == "desc":
+          product=product.order_by(Product.price.desc())
+        else:
+          product=product.order_by(Product.price)
+
+      elif sort == "expiry":
+        if order == "desc":
+          product=product.order_by(Product.expiry.desc())
+        else:
+          product=product.order_by(Product.expiry)
+
+    return product.all()
+
+  @staticmethod
+  def get_product_by_id(id):
+    return Product.query.get(id)

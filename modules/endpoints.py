@@ -21,12 +21,10 @@ def create():
     return jsonify({"error":"price must be > 0"}),400
 
   product = Product(name, price, expiry, category_id)
-
   try:
     product.new() # created in tables.py for add and commit
 
   except IntegrityError as e:
-
     if "violates unique constraint" in str(e):
       return jsonify({"error":name+" already exists"}),400
     elif "violates foreign key constraint" in str(e):
@@ -38,37 +36,13 @@ def create():
 
 @app.route('/get', methods=['GET'])
 def list():
-  product=Product.Query()
   result=[]
-
-  if request.data:
-    category_id = request.json.get('category_id')
-    sort = request.json.get('sort')
-    order = request.json.get('order')
-
-    if category_id:
-      product=product.filter_by(category_id=category_id)
-
-    if sort == "price":
-      if order == "desc":
-        product=product.order_by(Product.price.desc())
-      else:
-        product=product.order_by(Product.price)
-
-    elif sort == "expiry":
-      if order == "desc":
-        product=product.order_by(Product.expiry.desc())
-      else:
-        product=product.order_by(Product.expiry)
-
-  product=product.all()
-
+  product=Product.get_filtered_products(request)
   if not product:
     return jsonify({"error":"unavailable category"}),404
 
   for products in product:
-    result.append([{"name":products.name,"price":products.price,"expiry":str(products.expiry),"category_id":products.category_id}])
-
+    result.append({"name":products.name,"price":products.price,"expiry":str(products.expiry),"category_id":products.category_id})
   return jsonify(result),200
 
 @app.route('/delete/<id>', methods=['DELETE'])
@@ -83,8 +57,7 @@ def delete(id):
 
 @app.route('/update/<id>', methods=['POST'])
 def update(id):
-  product = Product.Query().get(id)
-
+  product = Product.get_product_by_id(id)
   if not product:
     return jsonify({"error":"product unavailable"}),404 # for wrong product id
   if request.data: # if request.body is not empty
