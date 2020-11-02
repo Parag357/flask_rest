@@ -144,6 +144,7 @@ class InventoryTest(unittest.TestCase):
 	def test_delete_success_with_unavailable_id(self,mock_delete):
 		url="/delete/5500"
 		tester=app.test_client(self)
+		mock_delete.side_effect = Exception()
 		response=tester.delete(url)
 		response_data = json.loads(response.data)
 		statuscode=response.status_code
