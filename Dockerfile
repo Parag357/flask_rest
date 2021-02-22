@@ -2,7 +2,7 @@ FROM python:2.7
 
 WORKDIR /wsgi
 
-COPY.
+COPY .
 
 # RUN pip freeze > requirements.txt
 
